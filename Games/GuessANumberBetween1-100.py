@@ -12,5 +12,26 @@ import random
 
 
 
+print('Guess the number that is between 1 - 100, You have 6 Guesses, Good Luck!')
+randomNumber = random.randint(1,100)
+guesses = 0
+while guesses < 6:
+    guess = int(input())
+
+    if guess == randomNumber:
+        print('Congratulations you won!')
+        break
+    elif guess < randomNumber:
+        print(' its lower than',guess)
+    else:
+        print(' its higher than', guess)
+    guesses +=1
+    print('you haves ', 6 - guesses, 'guesses left')
+
+    if guesses >= 6:
+        print("You lost, better luck next time")
+
+
+
 
 
